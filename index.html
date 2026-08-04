@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Армен Єгіазарян — Стоматолог, Дніпро</title>
+<style>
+  :root {
+    --ink: #1a1f2e;
+    --ink-muted: #4a5068;
+    --ink-light: #8891a8;
+    --bg: #f8f9fb;
+    --bg-white: #ffffff;
+    --bg-card: #ffffff;
+    --teal: #2a8f8f;
+    --teal-light: #3aacac;
+    --teal-faint: #e8f5f5;
+    --teal-mid: #c2e8e8;
+    --border: #e4e8ef;
+    --radius: 12px;
+    --radius-sm: 8px;
+    --shadow: 0 2px 16px rgba(26,31,46,0.07);
+    --shadow-md: 0 4px 32px rgba(26,31,46,0.10);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.6;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ─── NAV ─── */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 24px;
+  }
+  .nav-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+  }
+  .nav-logo {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--ink);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+  }
+  .nav-logo span { color: var(--teal); }
+  .nav-cta {
+    background: var(--teal);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 18px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+  .nav-cta:hover { background: var(--teal-light); }
+
+  /* ─── SECTIONS ─── */
+  section { padding: 72px 24px; }
+  .container { max-width: 900px; margin: 0 auto; }
+
+  .section-label {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 12px;
+  }
+  h1 {
+    font-size: clamp(28px, 5vw, 48px);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+    color: var(--ink);
+    margin-bottom: 20px;
+  }
+  h2 {
+    font-size: clamp(22px, 3.5vw, 32px);
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    color: var(--ink);
+    margin-bottom: 16px;
+  }
+  h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 8px;
+  }
+  p { color: var(--ink-muted); line-height: 1.7; }
+
+  /* ─── HERO ─── */
+  .hero {
+    background: var(--bg-white);
+    padding: 80px 24px 72px;
+    border-bottom: 1px solid var(--border);
+  }
+  .hero-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+  .hero-text { }
+  .hero-text p {
+    font-size: 17px;
+    margin-bottom: 32px;
+    max-width: 420px;
+  }
+  .hero-image-placeholder {
+    background: var(--teal-faint);
+    border: 2px dashed var(--teal-mid);
+    border-radius: var(--radius);
+    height: 340px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: var(--teal);
+    font-size: 14px;
+    text-align: center;
+    padding: 24px;
+  }
+  .hero-image-placeholder svg { opacity: 0.5; }
+  .btn-primary {
+    display: inline-block;
+    background: var(--teal);
+    color: #fff;
+    border: none;
+    border-radius: var(--radius-sm);
+    padding: 14px 28px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.15s;
+  }
+  .btn-primary:hover { background: var(--teal-light); transform: translateY(-1px); }
+  .btn-secondary {
+    display: inline-block;
+    background: transparent;
+    color: var(--teal);
+    border: 1.5px solid var(--teal);
+    border-radius: var(--radius-sm);
+    padding: 13px 28px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+  .btn-secondary:hover { background: var(--teal-faint); }
+
+  /* ─── ABOUT METHOD ─── */
+  .about-method {
+    background: var(--bg);
+  }
+  .method-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+    margin-top: 32px;
+  }
+  .placeholder-tag {
+    display: inline-block;
+    background: var(--teal-faint);
+    color: var(--teal);
+    border: 1px solid var(--teal-mid);
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    margin-bottom: 12px;
+  }
+
+  /* ─── WHO IT FITS ─── */
+  .who-fits { background: var(--bg-white); }
+  .fit-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 32px;
+  }
+  .fit-card {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px 20px;
+  }
+  .fit-card-icon {
+    width: 40px;
+    height: 40px;
+    background: var(--teal-faint);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 14px;
+  }
+  .fit-card-icon svg { stroke: var(--teal); }
+
+  /* ─── ADVANTAGES ─── */
+  .advantages { background: var(--bg); }
+  .adv-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 32px;
+  }
+  .adv-item {
+    background: var(--bg-white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  .adv-num {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--teal-mid);
+    line-height: 1;
+    min-width: 36px;
+    letter-spacing: -0.04em;
+  }
+
+  /* ─── STAGES ─── */
+  .stages { background: var(--bg-white); }
+  .stages-list {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .stage {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+    padding: 24px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .stage:last-child { border-bottom: none; }
+  .stage-num {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--teal);
+    background: var(--teal-faint);
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .stage-text h3 { margin-bottom: 6px; font-size: 16px; }
+  .stage-text p { font-size: 15px; }
+
+  /* ─── RESULTS ─── */
+  .results { background: var(--bg); }
+  .results-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 32px;
+  }
+  .result-placeholder {
+    background: var(--bg-white);
+    border: 2px dashed var(--teal-mid);
+    border-radius: var(--radius);
+    aspect-ratio: 4/3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: var(--teal);
+    font-size: 13px;
+    text-align: center;
+    padding: 20px;
+  }
+  .result-placeholder svg { opacity: 0.45; }
+
+  /* ─── TRUST ─── */
+  .trust { background: var(--bg-white); }
+  .trust-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 32px;
+  }
+  .trust-card {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px 22px;
+    background: var(--bg);
+  }
+  .trust-card-icon {
+    margin-bottom: 16px;
+  }
+
+  /* ─── FAQ ─── */
+  .faq { background: var(--bg); }
+  .faq-list {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .faq-item {
+    background: var(--bg-white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+  }
+  .faq-q {
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    padding: 20px 24px;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--ink);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+  }
+  .faq-q .faq-icon {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    background: var(--teal-faint);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.25s;
+  }
+  .faq-item.open .faq-icon { transform: rotate(45deg); }
+  .faq-a {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    padding: 0 24px;
+  }
+  .faq-item.open .faq-a {
+    max-height: 300px;
+    padding: 0 24px 20px;
+  }
+  .faq-a p { font-size: 15px; }
+
+  /* ─── REVIEWS ─── */
+  .reviews { background: var(--bg-white); }
+  .reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 32px;
+  }
+  .review-placeholder {
+    background: var(--bg);
+    border: 2px dashed var(--border);
+    border-radius: var(--radius);
+    padding: 28px 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+  .review-stars { color: var(--teal-mid); font-size: 18px; letter-spacing: 2px; }
+  .review-text-line {
+    height: 10px;
+    background: var(--border);
+    border-radius: 4px;
+    width: 100%;
+  }
+  .review-text-line.short { width: 60%; }
+  .review-author {
+    font-size: 13px;
+    color: var(--ink-light);
+    font-weight: 600;
+  }
+
+  /* ─── FORM ─── */
+  .booking { background: var(--teal-faint); border-top: 1px solid var(--teal-mid); border-bottom: 1px solid var(--teal-mid); }
+  .booking-inner {
+    max-width: 560px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .booking-inner h2 { margin-bottom: 8px; }
+  .booking-inner > p { margin-bottom: 32px; }
+  .form-field {
+    margin-bottom: 16px;
+    text-align: left;
+  }
+  .form-field label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 6px;
+  }
+  .form-field input,
+  .form-field textarea {
+    width: 100%;
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 12px 14px;
+    font-size: 15px;
+    color: var(--ink);
+    background: var(--bg-white);
+    font-family: inherit;
+    transition: border-color 0.2s;
+    outline: none;
+  }
+  .form-field input:focus,
+  .form-field textarea:focus { border-color: var(--teal); }
+  .form-field input.error,
+  .form-field textarea.error { border-color: #e05c5c; }
+  .form-field .err-msg { font-size: 12px; color: #e05c5c; margin-top: 4px; display: none; }
+  .form-field .err-msg.visible { display: block; }
+  .form-field textarea { resize: vertical; min-height: 90px; }
+  .form-submit {
+    width: 100%;
+    background: var(--teal);
+    color: #fff;
+    border: none;
+    border-radius: var(--radius-sm);
+    padding: 15px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 4px;
+  }
+  .form-submit:hover { background: var(--teal-light); }
+  .form-note { font-size: 12px; color: var(--ink-light); margin-top: 12px; }
+  .form-success {
+    display: none;
+    background: var(--bg-white);
+    border: 1px solid var(--teal-mid);
+    border-radius: var(--radius);
+    padding: 32px;
+    text-align: center;
+  }
+  .form-success.visible { display: block; }
+  .form-success h3 { color: var(--teal); margin-bottom: 8px; }
+
+  /* ─── CONTACTS ─── */
+  .contacts { background: var(--bg-white); }
+  .contacts-inner {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+  }
+  .contacts-info { flex: 1; }
+  .contacts-info h2 { margin-bottom: 20px; }
+  .contact-row {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .contact-row:last-of-type { border-bottom: none; }
+  .contact-row svg { stroke: var(--teal); flex-shrink: 0; }
+  .contact-row-text { }
+  .contact-row-label { font-size: 12px; color: var(--ink-light); font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; }
+  .contact-row-value { font-size: 15px; color: var(--ink); font-weight: 500; }
+  .contact-row-value a { color: var(--ink); text-decoration: none; }
+  .contact-row-value a:hover { color: var(--teal); }
+  .call-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--teal);
+    color: #fff;
+    text-decoration: none;
+    border-radius: var(--radius-sm);
+    padding: 14px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 24px;
+    transition: background 0.2s;
+  }
+  .call-btn:hover { background: var(--teal-light); }
+  .map-placeholder {
+    flex: 1;
+    background: var(--bg);
+    border: 2px dashed var(--border);
+    border-radius: var(--radius);
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: var(--ink-light);
+    font-size: 13px;
+    text-align: center;
+    padding: 24px;
+  }
+
+  /* ─── FOOTER ─── */
+  footer {
+    background: var(--ink);
+    color: rgba(255,255,255,0.5);
+    text-align: center;
+    padding: 24px;
+    font-size: 13px;
+  }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 768px) {
+    section { padding: 52px 20px; }
+    .hero { padding: 56px 20px 52px; }
+    .hero-inner { grid-template-columns: 1fr; gap: 32px; }
+    .hero-image-placeholder { height: 200px; }
+    .method-grid { grid-template-columns: 1fr; gap: 24px; }
+    .fit-cards { grid-template-columns: 1fr; gap: 14px; }
+    .adv-list { grid-template-columns: 1fr; }
+    .results-grid { grid-template-columns: 1fr; }
+    .trust-cards { grid-template-columns: 1fr; gap: 14px; }
+    .reviews-grid { grid-template-columns: 1fr; }
+    .contacts-inner { flex-direction: column; }
+    .map-placeholder { min-height: 180px; }
+  }
+
+  @media (max-width: 480px) {
+    .nav-inner { padding: 0; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { transition-duration: 0.01ms !important; }
+    html { scroll-behavior: auto; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">Армен <span>Єгіазарян</span> · Стоматолог</a>
+    <a href="#booking" class="nav-cta">Записатися</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="section-label">Дніпро · Протезування</div>
+      <h1>Відновіть посмішку так, щоб ніхто не помітив різниці</h1>
+      <p>Сучасний метод протезування, який підбирається індивідуально — без тривалої адаптації та без компромісів з естетикою.</p>
+      <a href="#booking" class="btn-primary">Записатися на консультацію</a>
+    </div>
+    <div class="hero-image-placeholder">
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+      <span>Тут буде фото лікаря<br>або клініки</span>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT METHOD -->
+<section class="about-method">
+  <div class="container">
+    <div class="section-label">Що це за метод</div>
+    <h2>Протезування, якому можна довіряти</h2>
+    <div class="method-grid">
+      <div>
+        <div class="placeholder-tag">Назва методу</div>
+        <p style="margin-bottom:16px;">Цей блок буде оновлено після уточнення точної назви методу та матеріалів, які використовуються. Тут буде пояснення суті методики простою мовою — без медичного жаргону.</p>
+        <p>Основна ідея — коротко, зрозуміло та чесно розповісти пацієнту, що саме і як відбувається, щоб він відчував впевненість ще до першого прийому.</p>
+      </div>
+      <div>
+        <div style="background: var(--bg-white); border:1px solid var(--border); border-radius: var(--radius); padding:28px;">
+          <h3 style="margin-bottom:14px; color: var(--teal);">Коротко про метод</h3>
+          <div style="display:flex;flex-direction:column;gap:12px;">
+            <div style="display:flex;gap:10px;align-items:flex-start;">
+              <span style="color:var(--teal);font-size:18px;line-height:1;">✓</span>
+              <p style="font-size:14px;"><strong style="color:var(--ink);">Матеріали:</strong> заглушка — буде вказано після уточнення</p>
+            </div>
+            <div style="display:flex;gap:10px;align-items:flex-start;">
+              <span style="color:var(--teal);font-size:18px;line-height:1;">✓</span>
+              <p style="font-size:14px;"><strong style="color:var(--ink);">Термін служби:</strong> заглушка — буде вказано після уточнення</p>
+            </div>
+            <div style="display:flex;gap:10px;align-items:flex-start;">
+              <span style="color:var(--teal);font-size:18px;line-height:1;">✓</span>
+              <p style="font-size:14px;"><strong style="color:var(--ink);">Кількість візитів:</strong> заглушка — буде вказано після уточнення</p>
+            </div>
+            <div style="display:flex;gap:10px;align-items:flex-start;">
+              <span style="color:var(--teal);font-size:18px;line-height:1;">✓</span>
+              <p style="font-size:14px;"><strong style="color:var(--ink);">Болючість:</strong> заглушка — буде вказано після уточнення</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO IT FITS -->
+<section class="who-fits">
+  <div class="container">
+    <div class="section-label">Кому підходить</div>
+    <h2>Метод підходить вам, якщо…</h2>
+    <div class="fit-cards">
+      <div class="fit-card">
+        <div class="fit-card-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
+        <h3>Естетичний результат</h3>
+        <p style="font-size:14px;">Якщо для вас важливо, щоб зуби виглядали природньо і красиво, а не «виглядали протезом».</p>
+      </div>
+      <div class="fit-card">
+        <div class="fit-card-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <h3>Довготривале рішення</h3>
+        <p style="font-size:14px;">Якщо ви хочете зробити це один раз і не повертатися до цього питання роками.</p>
+      </div>
+      <div class="fit-card">
+        <div class="fit-card-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>Безпека та комфорт</h3>
+        <p style="font-size:14px;">Якщо ви раніше відкладали лікування через страх або погані враження від протезування.</p>
+      </div>
+    </div>
+    <p style="margin-top: 24px; font-size: 14px; color: var(--ink-light);">* Остаточну відповідь дасть консультація — кожна ситуація індивідуальна.</p>
+  </div>
+</section>
+
+<!-- ADVANTAGES -->
+<section class="advantages">
+  <div class="container">
+    <div class="section-label">Переваги методу</div>
+    <h2>Чому пацієнти обирають цей підхід</h2>
+    <div class="adv-list">
+      <div class="adv-item">
+        <div class="adv-num">01</div>
+        <div>
+          <h3>Природній вигляд</h3>
+          <p style="font-size:15px;">Результат виглядає так, ніби ваші власні зуби — без видимих меж, відблисків і штучності.</p>
+        </div>
+      </div>
+      <div class="adv-item">
+        <div class="adv-num">02</div>
+        <div>
+          <h3>Без болю під час процедури</h3>
+          <p style="font-size:15px;">Використовується якісна анестезія та відпрацьований протокол, щоб процес був максимально комфортним.</p>
+        </div>
+      </div>
+      <div class="adv-item">
+        <div class="adv-num">03</div>
+        <div>
+          <h3>Індивідуальний підбір</h3>
+          <p style="font-size:15px;">Форма, відтінок і розмір підбираються під ваше обличчя — не за шаблоном, а під вас.</p>
+        </div>
+      </div>
+      <div class="adv-item">
+        <div class="adv-num">04</div>
+        <div>
+          <h3>Зручно в побуті</h3>
+          <p style="font-size:15px;">Не потребує особливого догляду чи обмежень у харчуванні — живете звично.</p>
+        </div>
+      </div>
+      <div class="adv-item">
+        <div class="adv-num">05</div>
+        <div>
+          <h3>Мінімум візитів</h3>
+          <p style="font-size:15px;">Процес спланований так, щоб не займати зайвого часу — кількість візитів визначається індивідуально.</p>
+        </div>
+      </div>
+      <div class="adv-item">
+        <div class="adv-num">06</div>
+        <div>
+          <h3>Контроль результату</h3>
+          <p style="font-size:15px;">Перед фінальним кроком ви бачите та погоджуєте результат — жодних сюрпризів.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STAGES -->
+<section class="stages">
+  <div class="container">
+    <div class="section-label">Як проходить лікування</div>
+    <h2>Кроки від консультації до результату</h2>
+    <div class="stages-list">
+      <div class="stage">
+        <div class="stage-num">1</div>
+        <div class="stage-text">
+          <h3>Консультація та діагностика</h3>
+          <p>Оглядаємо ситуацію, слухаємо ваші побажання та пояснюємо, що саме пропонуємо і чому. Без тиску та нав'язування.</p>
+        </div>
+      </div>
+      <div class="stage">
+        <div class="stage-num">2</div>
+        <div class="stage-text">
+          <h3>Планування та узгодження</h3>
+          <p>Розробляємо індивідуальний план лікування. Ви бачите кожен крок та терміни до початку роботи.</p>
+        </div>
+      </div>
+      <div class="stage">
+        <div class="stage-num">3</div>
+        <div class="stage-text">
+          <h3>Підготовка</h3>
+          <p>За необхідності — підготовчі процедури для найкращого результату. Що саме входить — залежить від вашої ситуації.</p>
+        </div>
+      </div>
+      <div class="stage">
+        <div class="stage-num">4</div>
+        <div class="stage-text">
+          <h3>Виготовлення та приміряння</h3>
+          <p>Заглушка: цей крок залежить від обраного методу. Ви погоджуєте вигляд перед фінальним встановленням.</p>
+        </div>
+      </div>
+      <div class="stage">
+        <div class="stage-num">5</div>
+        <div class="stage-text">
+          <h3>Фінальне встановлення</h3>
+          <p>Завершальний крок — і ви виходите з посмішкою, яка вам подобається. Даємо рекомендації по догляду.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESULTS -->
+<section class="results">
+  <div class="container">
+    <div class="section-label">Результати роботи</div>
+    <h2>Приклади — з'являться після додавання матеріалів</h2>
+    <div class="results-grid">
+      <div class="result-placeholder">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+        <span>Тут буде фото<br><strong>до та після</strong></span>
+      </div>
+      <div class="result-placeholder">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+        <span>Тут буде відео<br><strong>процесу лікування</strong></span>
+      </div>
+      <div class="result-placeholder">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+        <span>Тут буде приклад<br><strong>завершеної роботи</strong></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST -->
+<section class="trust">
+  <div class="container">
+    <div class="section-label">Про лікаря</div>
+    <h2>Армен Єгіазарян — стоматолог-ортопед, Дніпро</h2>
+    <div class="trust-cards">
+      <div class="trust-card">
+        <div class="trust-card-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>Понад 5 років досвіду</h3>
+        <p style="font-size:14px;">Лікування, протезування та відбілювання — напрямки, у яких накопичено реальну практику, а не тільки теорія.</p>
+      </div>
+      <div class="trust-card">
+        <div class="trust-card-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="1.8"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
+        </div>
+        <h3>Сучасне обладнання</h3>
+        <p style="font-size:14px;">Діагностика та лікування проводяться на обладнанні, що відповідає актуальним стандартам стоматологічної практики.</p>
+      </div>
+      <div class="trust-card">
+        <div class="trust-card-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3>Індивідуальний підхід</h3>
+        <p style="font-size:14px;">Жодного конвеєра. Кожна ситуація розглядається окремо — від діагностики до кінцевого результату.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="container">
+    <div class="section-label">Часті запитання</div>
+    <h2>Що турбує пацієнтів найбільше</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          Чи буде боляче під час процедури?
+          <span class="faq-icon" aria-hidden="true">
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="var(--teal)" stroke-width="2"><line x1="5" y1="1" x2="5" y2="9"/><line x1="1" y1="5" x2="9" y2="5"/></svg>
+          </span>
+        </button>
+        <div class="faq-a">
+          <p>Процедура проводиться з анестезією. Більшість пацієнтів описують відчуття як мінімально дискомфортні або зовсім безболісні. Якщо ви боїтеся болю — скажіть про це на консультації, і ми підберемо підхід під вас.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          Скільки часу займе весь процес?
+          <span class="faq-icon" aria-hidden="true">
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="var(--teal)" stroke-width="2"><line x1="5" y1="1" x2="5" y2="9"/><line x1="1" y1="5" x2="9" y2="5"/></svg>
+          </span>
+        </button>
+        <div class="faq-a">
+          <p>Залежить від ситуації та обраного методу. На консультації ми складемо конкретний план із реальними термінами — без загальних обіцянок «за один день» або «за тиждень».</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          Чи буде видно, що це протез?
+          <span class="faq-icon" aria-hidden="true">
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="var(--teal)" stroke-width="2"><line x1="5" y1="1" x2="5" y2="9"/><line x1="1" y1="5" x2="9" y2="5"/></svg>
+          </span>
+        </button>
+        <div class="faq-a">
+          <p>Сучасні матеріали та техніки дозволяють досягти дуже природного результату. Відтінок, форма і розмір підбираються індивідуально. Кінцевий вигляд ви побачите та погодите ще до фінального кроку.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          Як доглядати за результатом?
+          <span class="faq-icon" aria-hidden="true">
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="var(--teal)" stroke-width="2"><line x1="5" y1="1" x2="5" y2="9"/><line x1="1" y1="5" x2="9" y2="5"/></svg>
+          </span>
+        </button>
+        <div class="faq-a">
+          <p>Здебільшого — стандартна гігієна порожнини рота. Детальні рекомендації отримаєте після процедури. Ніяких складних або дорогих ритуалів догляду.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          Що робити, якщо щось піде не так?
+          <span class="faq-icon" aria-hidden="true">
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="var(--teal)" stroke-width="2"><line x1="5" y1="1" x2="5" y2="9"/><line x1="1" y1="5" x2="9" y2="5"/></svg>
+          </span>
+        </button>
+        <div class="faq-a">
+          <p>На будь-яке питання чи непорозуміння після лікування — завжди можна зателефонувати або записатися на повторний огляд. Ми не зникаємо після процедури.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews">
+  <div class="container">
+    <div class="section-label">Відгуки пацієнтів</div>
+    <h2>Тут з'являться відгуки</h2>
+    <p style="margin-bottom: 32px; max-width: 480px;">Після збору реальних відгуків від пацієнтів вони будуть розміщені тут. Заглушки ілюструють майбутній вигляд блоку.</p>
+    <div class="reviews-grid">
+      <div class="review-placeholder">
+        <div class="review-stars">★★★★★</div>
+        <div class="review-text-line"></div>
+        <div class="review-text-line"></div>
+        <div class="review-text-line short"></div>
+        <div class="review-author">— Ім'я пацієнта, місяць 2024</div>
+      </div>
+      <div class="review-placeholder">
+        <div class="review-stars">★★★★★</div>
+        <div class="review-text-line"></div>
+        <div class="review-text-line"></div>
+        <div class="review-text-line short"></div>
+        <div class="review-author">— Ім'я пацієнта, місяць 2024</div>
+      </div>
+      <div class="review-placeholder">
+        <div class="review-stars">★★★★★</div>
+        <div class="review-text-line"></div>
+        <div class="review-text-line"></div>
+        <div class="review-text-line short"></div>
+        <div class="review-author">— Ім'я пацієнта, місяць 2024</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING FORM -->
+<section class="booking" id="booking">
+  <div class="container">
+    <div class="booking-inner">
+      <div class="section-label">Записатися</div>
+      <h2>Консультація — перший крок</h2>
+      <p>Залиште контакти, і ми зв'яжемося з вами, щоб підібрати зручний час. Жодних зобов'язань.</p>
+
+      <form id="contactForm" novalidate>
+        <div class="form-field">
+          <label for="f-name">Ваше ім'я</label>
+          <input type="text" id="f-name" name="name" placeholder="Олексій">
+          <span class="err-msg" id="err-name">Будь ласка, вкажіть ім'я</span>
+        </div>
+        <div class="form-field">
+          <label for="f-phone">Телефон</label>
+          <input type="tel" id="f-phone" name="phone" placeholder="+380 00 000 00 00">
+          <span class="err-msg" id="err-phone">Вкажіть номер телефону</span>
+        </div>
+        <div class="form-field">
+          <label for="f-msg">Коментар (необов'язково)</label>
+          <textarea id="f-msg" name="message" placeholder="Наприклад: зручний час або питання, яке турбує"></textarea>
+        </div>
+        <button type="submit" class="form-submit">Надіслати заявку →</button>
+        <p class="form-note">Ваші дані використовуються лише для зв'язку щодо запису. Без спаму.</p>
+      </form>
+
+      <div class="form-success" id="formSuccess">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="2" style="margin-bottom:12px;"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>
+        <h3>Заявку отримано!</h3>
+        <p>Ми зателефонуємо вам найближчим часом, щоб домовитися про час консультації.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTS -->
+<section class="contacts">
+  <div class="container">
+    <div class="contacts-inner">
+      <div class="contacts-info">
+        <div class="section-label">Контакти</div>
+        <h2>Зв'язатися з нами</h2>
+        <div class="contact-row">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.59 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.16 6.16l1.27-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <div class="contact-row-text">
+            <div class="contact-row-label">Телефон</div>
+            <div class="contact-row-value"><a href="tel:+380935367667">+380 93 536 76 67</a></div>
+          </div>
+        </div>
+        <div class="contact-row">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div class="contact-row-text">
+            <div class="contact-row-label">Місто</div>
+            <div class="contact-row-value">Дніпро, Україна</div>
+          </div>
+        </div>
+        <div class="contact-row">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          <div class="contact-row-text">
+            <div class="contact-row-label">Час роботи</div>
+            <div class="contact-row-value">Заглушка — уточнити у лікаря</div>
+          </div>
+        </div>
+        <a href="tel:+380935367667" class="call-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.59 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.16 6.16l1.27-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Зателефонувати
+        </a>
+      </div>
+      <div class="map-placeholder">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span>Тут буде карта або<br>адреса клініки</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2024 Армен Єгіазарян — Стоматолог, Дніпро. Цей сайт є інформаційним. Результати індивідуальні.</p>
+</footer>
+
+<script>
+  // FAQ accordion
+  document.querySelectorAll('.faq-q').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(el => {
+        el.classList.remove('open');
+        el.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+
+  // Form validation
+  const form = document.getElementById('contactForm');
+  const success = document.getElementById('formSuccess');
+
+  function showError(inputId, errId, show) {
+    const input = document.getElementById(inputId);
+    const err = document.getElementById(errId);
+    input.classList.toggle('error', show);
+    err.classList.toggle('visible', show);
+  }
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const name = document.getElementById('f-name').value.trim();
+    const phone = document.getElementById('f-phone').value.trim();
+    let valid = true;
+
+    if (!name) { showError('f-name', 'err-name', true); valid = false; }
+    else { showError('f-name', 'err-name', false); }
+
+    if (!phone || phone.replace(/\D/g, '').length < 9) {
+      showError('f-phone', 'err-phone', true); valid = false;
+    } else { showError('f-phone', 'err-phone', false); }
+
+    if (!valid) return;
+
+    form.style.display = 'none';
+    success.classList.add('visible');
+  });
+
+  document.getElementById('f-name').addEventListener('input', () => showError('f-name', 'err-name', false));
+  document.getElementById('f-phone').addEventListener('input', () => showError('f-phone', 'err-phone', false));
+</script>
+</body>
+</html>
